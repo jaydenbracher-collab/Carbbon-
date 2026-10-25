@@ -43,7 +43,7 @@
 </head>
 <body class="antialiased selection:bg-white selection:text-black">
 
-    <!-- TOP ANNOUNCEMENT BAR (ADRO STYLE) -->
+    <!-- TOP ANNOUNCEMENT BAR -->
     <div class="bg-black text-gray-400 text-xs font-semibold tracking-widest text-center py-2.5 uppercase border-b border-carbonBorder px-4">
         International Orders Typically Ship In 3–4 Weeks • Custom Quote System Active
     </div>
@@ -59,26 +59,53 @@
             <!-- Desktop Nav Links -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide text-gray-300">
                 <a href="#catalog" class="hover:text-white transition">Catalog</a>
-                <a href="#about" class="hover:text-white transition">Engineering</a>
-                <a href="#gallery" class="hover:text-white transition">Gallery</a>
+                <a href="#bmw-section" class="hover:text-white transition">BMW</a>
+                <a href="#audi-section" class="hover:text-white transition">Audi</a>
+                <a href="#revozport-section" class="hover:text-white transition">Revozport</a>
+                <a href="#quote-section" class="hover:text-white transition">Contact / Quote</a>
             </nav>
 
-            <!-- Icons (Search, Cart/Quote, Menu) -->
+            <!-- Icons (Cart/Quote, Mobile Menu Toggle) -->
             <div class="flex items-center space-x-6">
-                <button onclick="document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})" class="text-gray-300 hover:text-white text-lg" title="Search Catalog">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
                 <button onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="relative text-gray-300 hover:text-white text-lg flex items-center gap-2" title="Quote Drawer">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span id="cart-count" class="bg-white text-black text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                </button>
+                <button onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white text-2xl focus:outline-none" title="Open Menu">
+                    <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- CINEMATIC HERO SECTION (ADRO STYLE) -->
+    <!-- SIDE SLIDE-OUT MENU DRAWER -->
+    <div id="side-menu" class="fixed inset-y-0 right-0 z-50 w-80 bg-[#121212] border-l border-carbonBorder p-8 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col justify-between">
+        <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-carbonBorder pb-4">
+                <span class="text-lg font-black uppercase tracking-wider text-white">Navigation</span>
+                <button onclick="toggleMobileMenu()" class="text-gray-400 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4 text-base font-semibold">
+                <a href="#catalog" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white transition">Full Catalog</a>
+                <a href="#bmw-section" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white transition">BMW Parts</a>
+                <a href="#audi-section" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white transition">Audi Parts</a>
+                <a href="#revozport-section" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white transition">Revozport Style</a>
+                <a href="#quote-section" onclick="toggleMobileMenu()" class="text-white hover:text-gray-300 transition pt-4 border-t border-carbonBorder flex items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i> Contact Us / Quote
+                </a>
+            </nav>
+        </div>
+        <div class="text-xs text-gray-500 text-center border-t border-carbonBorder pt-4">
+            Carbbon Inc. &copy; 2026
+        </div>
+    </div>
+    <!-- Backdrop overlay for side menu -->
+    <div id="menu-backdrop" onclick="toggleMobileMenu()" class="fixed inset-0 bg-black/60 z-40 hidden transition-opacity"></div>
+
+    <!-- CINEMATIC HERO SECTION -->
     <section class="relative h-[90vh] flex items-center justify-center text-center px-6 overflow-hidden bg-black">
-        <!-- Cinematic background overlay image -->
         <div class="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-black/40 to-black/60"></div>
 
@@ -94,7 +121,7 @@
                     Explore Catalog
                 </a>
                 <a href="#quote-section" class="w-full sm:w-auto bg-transparent hover:bg-white/10 text-white border border-white/30 font-bold uppercase tracking-wider px-8 py-3.5 rounded transition">
-                    View Quote List
+                    Contact Us
                 </a>
             </div>
         </div>
@@ -105,65 +132,65 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-carbonBorder pb-6">
             <div>
                 <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Aero Components</span>
-                <h2 class="text-3xl font-extrabold uppercase tracking-wide mt-1">BMW & Audi Lineup</h2>
+                <h2 class="text-3xl font-extrabold uppercase tracking-wide mt-1">Brands & Catalog</h2>
             </div>
-            <p class="text-sm text-gray-400 mt-2 md:mt-0">Handcrafted pre-preg carbon fibre with custom quote processing.</p>
+            <p class="text-sm text-gray-400 mt-2 md:mt-0">Select items across BMW, Audi, and Revozport specifications.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <!-- Item 1 -->
-            <div class="bg-cardBorder/30 border border-carbonBorder rounded-lg overflow-hidden group flex flex-col justify-between">
+            <!-- BMW Item -->
+            <div id="bmw-section" class="bg-cardBorder/30 border border-carbonBorder rounded-lg overflow-hidden group flex flex-col justify-between scroll-mt-28">
                 <div>
                     <div class="h-72 bg-black overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80" alt="BMW G82 M4" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85">
-                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur border border-carbonBorder text-xs uppercase px-3 py-1 rounded font-bold text-white">BMW G82 M4</span>
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80" alt="BMW" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur border border-carbonBorder text-xs uppercase px-3 py-1 rounded font-bold text-white">BMW Series</span>
                     </div>
                     <div class="p-6 space-y-2">
-                        <h3 class="text-lg font-bold">V-Style Carbon Front Splitter</h3>
-                        <p class="text-sm text-gray-400">Designed for OEM G80/G82 bumper architecture.</p>
+                        <h3 class="text-lg font-bold">BMW M3/M4 V-Style Carbon Splitter</h3>
+                        <p class="text-sm text-gray-400">High gloss pre-preg carbon weave for G-series & F-series.</p>
                     </div>
                 </div>
                 <div class="p-6 pt-0">
-                    <button onclick="addToQuote('BMW G82 M4 V-Style Front Splitter')" class="w-full bg-white hover:bg-gray-200 text-black font-bold uppercase tracking-wider py-3 rounded transition text-xs">
+                    <button onclick="addToQuote('BMW M3/M4 V-Style Carbon Splitter')" class="w-full bg-white hover:bg-gray-200 text-black font-bold uppercase tracking-wider py-3 rounded transition text-xs">
                         + Add To Quote
                     </button>
                 </div>
             </div>
 
-            <!-- Item 2 -->
-            <div class="bg-cardBorder/30 border border-carbonBorder rounded-lg overflow-hidden group flex flex-col justify-between">
+            <!-- Audi Item -->
+            <div id="audi-section" class="bg-cardBorder/30 border border-carbonBorder rounded-lg overflow-hidden group flex flex-col justify-between scroll-mt-28">
                 <div>
                     <div class="h-72 bg-black overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="BMW F82 M4" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85">
-                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur border border-carbonBorder text-xs uppercase px-3 py-1 rounded font-bold text-white">BMW F82 M4</span>
+                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80" alt="Audi" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur border border-carbonBorder text-xs uppercase px-3 py-1 rounded font-bold text-white">Audi Performance</span>
                     </div>
                     <div class="p-6 space-y-2">
-                        <h3 class="text-lg font-bold">GT-Style Carbon Rear Wing</h3>
-                        <p class="text-sm text-gray-400">Wind tunnel tested downforce wing assembly.</p>
+                        <h3 class="text-lg font-bold">Audi RS6/RS7 Dry Carbon Diffuser</h3>
+                        <p class="text-sm text-gray-400">Autoclave constructed aerodynamic rear diffuser package.</p>
                     </div>
                 </div>
                 <div class="p-6 pt-0">
-                    <button onclick="addToQuote('BMW F82 M4 GT-Style Carbon Rear Wing')" class="w-full bg-white hover:bg-gray-200 text-black font-bold uppercase tracking-wider py-3 rounded transition text-xs">
+                    <button onclick="addToQuote('Audi RS6/RS7 Dry Carbon Diffuser')" class="w-full bg-white hover:bg-gray-200 text-black font-bold uppercase tracking-wider py-3 rounded transition text-xs">
                         + Add To Quote
                     </button>
                 </div>
             </div>
 
-            <!-- Item 3 -->
-            <div class="bg-cardBorder/30 border border-carbonBorder rounded-lg overflow-hidden group flex flex-col justify-between">
+            <!-- Revozport Item -->
+            <div id="revozport-section" class="bg-cardBorder/30 border border-carbonBorder rounded-lg overflow-hidden group flex flex-col justify-between scroll-mt-28">
                 <div>
                     <div class="h-72 bg-black overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80" alt="Audi RS6 C8" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85">
-                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur border border-carbonBorder text-xs uppercase px-3 py-1 rounded font-bold text-white">Audi RS6 / RS7 (C8)</span>
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="Revozport Style" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-85">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur border border-carbonBorder text-xs uppercase px-3 py-1 rounded font-bold text-white">Revozport Style</span>
                     </div>
                     <div class="p-6 space-y-2">
-                        <h3 class="text-lg font-bold">Dry Carbon Rear Diffuser</h3>
-                        <p class="text-sm text-gray-400">Integrated exhaust shroud trim package.</p>
+                        <h3 class="text-lg font-bold">Revozport-Style Carbon Aero Kit</h3>
+                        <p class="text-sm text-gray-400">Aggressive track-inspired carbon splitters and canards.</p>
                     </div>
                 </div>
                 <div class="p-6 pt-0">
-                    <button onclick="addToQuote('Audi RS6/RS7 C8 Dry Carbon Rear Diffuser')" class="w-full bg-white hover:bg-gray-200 text-black font-bold uppercase tracking-wider py-3 rounded transition text-xs">
+                    <button onclick="addToQuote('Revozport-Style Carbon Aero Kit')" class="w-full bg-white hover:bg-gray-200 text-black font-bold uppercase tracking-wider py-3 rounded transition text-xs">
                         + Add To Quote
                     </button>
                 </div>
@@ -172,49 +199,13 @@
         </div>
     </section>
 
-    <!-- ENGINEERING & PROCESS -->
-    <section id="about" class="py-24 border-t border-carbonBorder bg-black">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Aerodynamic R&D</span>
-                <h2 class="text-3xl font-extrabold uppercase tracking-tight">
-                    Tested By F1 & OEM Engineers
-                </h2>
-                <p class="text-gray-400 font-light leading-relaxed">
-                    We don’t just style parts—we optimize them. Every component undergoes rigorous computational fluid dynamics (CFD) and track testing to guarantee high-speed stability and flawless structural integrity.
-                </p>
-            </div>
-            <div class="border border-carbonBorder p-8 rounded-lg bg-[#121212] h-64 flex items-center justify-center text-center">
-                <div class="space-y-2">
-                    <i class="fa-solid fa-wind text-4xl text-white"></i>
-                    <h3 class="font-bold uppercase tracking-wider">CFD & Wind Tunnel Validated</h3>
-                    <p class="text-xs text-gray-400">Engineered for absolute track performance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="py-24 max-w-7xl mx-auto px-6 border-t border-carbonBorder">
-        <div class="text-center space-y-3 mb-12">
-            <h2 class="text-2xl font-extrabold uppercase tracking-wide">Customer Builds</h2>
-            <p class="text-sm text-gray-400">Global vehicle gallery featuring Carbbon aerodynamic components.</p>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="h-48 bg-black border border-carbonBorder rounded flex items-center justify-center text-gray-600 font-bold uppercase text-xs">Build Alpha</div>
-            <div class="h-48 bg-black border border-carbonBorder rounded flex items-center justify-center text-gray-600 font-bold uppercase text-xs">Build Beta</div>
-            <div class="h-48 bg-black border border-carbonBorder rounded flex items-center justify-center text-gray-600 font-bold uppercase text-xs">Build Gamma</div>
-            <div class="h-48 bg-black border border-carbonBorder rounded flex items-center justify-center text-gray-600 font-bold uppercase text-xs">Build Delta</div>
-        </div>
-    </section>
-
-    <!-- QUOTE REQUEST DRAWER / FORM -->
-    <section id="quote-section" class="py-24 border-t border-carbonBorder bg-black">
+    <!-- QUOTE & CONTACT SECTION -->
+    <section id="quote-section" class="py-24 border-t border-carbonBorder bg-black scroll-mt-20">
         <div class="max-w-3xl mx-auto px-6">
             <div class="bg-[#121212] border border-carbonBorder rounded-xl p-8 sm:p-12 shadow-2xl">
                 <div class="text-center space-y-3 mb-8">
-                    <h2 class="text-2xl font-black uppercase tracking-wider">Your Quote Request</h2>
-                    <p class="text-gray-400 text-xs">Review your selected parts, provide your shipping destination, and submit to receive custom pricing.</p>
+                    <h2 class="text-2xl font-black uppercase tracking-wider">Contact Us & Quote Request</h2>
+                    <p class="text-gray-400 text-xs">Review your selected parts, provide your contact info and location, and send us your inquiry.</p>
                 </div>
 
                 <div id="quote-items-container" class="mb-8 bg-black border border-carbonBorder rounded-lg p-6">
@@ -227,9 +218,10 @@
                         <input type="text" id="cust-name" placeholder="Full Name" required class="w-full bg-black border border-carbonBorder rounded px-4 py-3 text-sm text-gray-100 focus:outline-none focus:border-white">
                         <input type="email" id="cust-email" placeholder="Email Address" required class="w-full bg-black border border-carbonBorder rounded px-4 py-3 text-sm text-gray-100 focus:outline-none focus:border-white">
                     </div>
-                    <input type="text" id="cust-location" placeholder="Shipping City & Country (e.g. Tokyo, Japan)" required class="w-full bg-black border border-carbonBorder rounded px-4 py-3 text-sm text-gray-100 focus:outline-none focus:border-white">
+                    <input type="text" id="cust-location" placeholder="Shipping City & Country (e.g. Los Angeles, USA)" required class="w-full bg-black border border-carbonBorder rounded px-4 py-3 text-sm text-gray-100 focus:outline-none focus:border-white">
+                    <textarea id="cust-message" rows="3" placeholder="Any specific questions or additional notes..." class="w-full bg-black border border-carbonBorder rounded px-4 py-3 text-sm text-gray-100 focus:outline-none focus:border-white"></textarea>
                     <button type="submit" class="w-full bg-white hover:bg-gray-200 text-black font-bold uppercase tracking-widest text-xs py-4 rounded transition shadow-lg">
-                        Submit Quote Request
+                        Send Inquiry & Request Quote
                     </button>
                 </form>
             </div>
@@ -247,6 +239,13 @@
     <!-- Script -->
     <script>
         let selectedProducts = [];
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('side-menu');
+            const backdrop = document.getElementById('menu-backdrop');
+            menu.classList.toggle('translate-x-full');
+            backdrop.classList.toggle('hidden');
+        }
 
         function addToQuote(productName) {
             if (!selectedProducts.includes(productName)) {
@@ -297,7 +296,7 @@
             const name = document.getElementById('cust-name').value;
             const email = document.getElementById('cust-email').value;
 
-            alert(`Thank you ${name}! Your quote request for ${selectedProducts.length} item(s) has been submitted. We will email pricing back to ${email} shortly.`);
+            alert(`Thank you ${name}! Your inquiry and quote request for ${selectedProducts.length} item(s) has been submitted. We will email pricing back to ${email} shortly.`);
             
             selectedProducts = [];
             updateQuoteUI();
