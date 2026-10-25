@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbbon | Premium Carbon Fibre Exterior Parts (BMW & Audi)</title>
+    <title>Carbbon | Premium Carbon Fibre Exterior Parts</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -57,28 +57,17 @@
                 CAR<span class="logo-box">BB</span>ON
             </a>
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
-                <a href="#bmw" class="hover:text-gray-400 transition">BMW Series</a>
-                <a href="#audi" class="hover:text-gray-400 transition">Audi Models</a>
+                <a href="#catalog" class="hover:text-gray-400 transition">Parts Catalog</a>
                 <a href="#about" class="hover:text-gray-400 transition">Process</a>
                 <a href="#gallery" class="hover:text-gray-400 transition">Gallery</a>
-                <a href="#contact" class="hover:text-gray-400 transition">Request Quote</a>
+                <a href="#quote-section" class="hover:text-gray-400 transition">Request Quote</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <a href="#contact" class="hidden sm:inline-block bg-white hover:bg-gray-200 text-black text-sm font-bold uppercase tracking-wider px-5 py-2.5 rounded transition shadow-lg">
-                    Request Quote
-                </a>
-                <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
-                    <i class="fa-solid fa-bars"></i>
+                <button onclick="document.getElementById('quote-section').scrollIntoView({behavior: 'smooth'})" class="relative bg-white hover:bg-gray-200 text-black text-sm font-bold uppercase tracking-wider px-5 py-2.5 rounded transition shadow-lg flex items-center gap-2">
+                    <i class="fa-solid fa-file-lines"></i> Quote Request 
+                    <span id="cart-count" class="bg-black text-white text-xs px-2 py-0.5 rounded-full font-mono">0</span>
                 </button>
             </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-carbonBorder px-6 py-4 space-y-3">
-            <a href="#bmw" class="block hover:text-gray-400">BMW Series</a>
-            <a href="#audi" class="block hover:text-gray-400">Audi Models</a>
-            <a href="#about" class="block hover:text-gray-400">Process</a>
-            <a href="#gallery" class="block hover:text-gray-400">Gallery</a>
-            <a href="#contact" class="block hover:text-gray-400">Request Quote</a>
         </div>
     </header>
 
@@ -86,126 +75,153 @@
     <section class="relative h-screen flex items-center justify-center text-center px-6 overflow-hidden">
         <div class="relative z-10 max-w-4xl mx-auto space-y-6">
             <span class="inline-block text-xs uppercase tracking-widest bg-cardBg text-gray-300 px-4 py-1.5 rounded-full border border-carbonBorder">
-                Complete BMW Series, X Models & Audi Performance Lineup
+                Complete BMW Series, X Models & Audi Performance Catalog
             </span>
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight uppercase">
                 Precision-Engineered <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-400 to-gray-600">Carbon Fibre.</span>
             </h1>
             <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-light">
-                Hand-crafted aerodynamic components tailored across every BMW series, SAV X-line, and Audi RS model.
+                Browse our full collection of hand-crafted carbon parts. Add items to your quote list and request pricing instantly.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <a href="#bmw" class="w-full sm:w-auto bg-white hover:bg-gray-200 text-black font-bold uppercase tracking-wider px-8 py-3.5 rounded transition shadow-lg">
-                    Explore BMW Series
-                </a>
-                <a href="#audi" class="w-full sm:w-auto bg-cardBg hover:bg-gray-800 text-gray-200 font-bold uppercase tracking-wider px-8 py-3.5 rounded border border-carbonBorder transition">
-                    Explore Audi Lineup
+            <div class="pt-4">
+                <a href="#catalog" class="inline-block bg-white hover:bg-gray-200 text-black font-bold uppercase tracking-wider px-8 py-3.5 rounded transition shadow-lg">
+                    Browse Parts Catalog
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- BMW FULL SERIES & X MODELS -->
-    <section id="bmw" class="py-24 max-w-7xl mx-auto px-6">
+    <!-- PARTS CATALOG SECTION -->
+    <section id="catalog" class="py-24 max-w-7xl mx-auto px-6">
         <div class="text-center space-y-4 mb-16">
             <span class="text-xs uppercase tracking-widest bg-cardBg text-gray-300 px-3 py-1 rounded-full border border-carbonBorder">
-                Bayerische Motoren Werke
+                Product Inventory
             </span>
-            <h2 class="text-3xl sm:text-4xl font-bold uppercase tracking-wide">BMW Full Series & X Lineup</h2>
-            <p class="text-gray-400 max-w-lg mx-auto">Select your series or X-model platform for custom front lips, diffusers, mirrors, and spoilers.</p>
+            <h2 class="text-3xl sm:text-4xl font-bold uppercase tracking-wide">BMW & Audi Carbon Components</h2>
+            <p class="text-gray-400 max-w-lg mx-auto">Select components across your platform and add them to your quote request.</p>
         </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- 1 Series -->
-            <div class="group relative bg-cardBg/90 backdrop-blur border border-carbonBorder rounded-xl overflow-hidden hover:border-white transition p-6">
-                <div class="text-2xl font-black mb-1 text-gray-500 group-hover:text-white transition">1 Series</div>
-                <h3 class="text-md font-bold uppercase">BMW 1 Series (E81/E87, F20, F40)</h3>
-                <p class="text-sm text-gray-400 mt-2">M-Sport front splitters, roof spoilers & mirror caps.</p>
-            </div>
-            <!-- 2 Series -->
-            <div class="group relative bg-cardBg/90 backdrop-blur border border-carbonBorder rounded-xl overflow-hidden hover:border-white transition p-6">
-                <div class="text-2xl font-black mb-1 text-gray-500 group-hover:text-white transition">2 Series</div>
-                <h3 class="text-md font-bold uppercase">BMW 2 Series (F22, F44, G42 / M2)</h3>
-                <p class="text-sm text-gray-400 mt-2">Aggressive front lips, high-kick spoilers & diffusers.</p>
-            </div>
-            <!-- 3 Series -->
-            <div class="group relative bg-cardBg/90 backdrop-blur border border-carbonBorder rounded-xl overflow-hidden hover:border-white transition p-6">
-                <div class="text-2xl font-black mb-1 text-gray-500 group-hover:text-white transition">3 Series</div>
-                <h3 class="text-md font-bold uppercase">BMW 3 Series (E46, E90, F30, G20 / M3)</h3>
-                <p class="text-sm text-gray-400 mt-2">Classic CSL trunks, V-style splitters & side skirts.</p>
-            </div>
-            <!-- 4 Series -->
-            <div class="group relative bg-cardBg/90 backdrop-blur border border-carbonBorder rounded-xl overflow-hidden hover:border-white transition p-6">
-                <div class="text-2xl font-black mb-1 text-gray-500 group-hover:text-white transition">4 Series</div>
-                <h3 class="text-md font-bold uppercase">BMW 4 Series (F32, G22, G82 / M4)</h3>
-                <p class="text-sm text-gray-400 mt-2">Performance grille surrounds, splitters & rear wings.</p>
-            </div>
-            <!-- 5 Series -->
-            <div class="group relative bg-cardBg/90 backdrop-blur border border-carbonBorder rounded-xl overflow-hidden hover:border-white transition p-6">
-                <div class="text-2xl font-black mb-1 text-gray-500 group-hover:text-white transition">5 Series</div>
-                <h3 class="text-md font-bold uppercase">BMW 5 Series (E60, F10, G30 / M5)</h3>
-                <p class="text-sm text-gray-400 mt-2">Executive carbon aero kits, trunk lips & diffusers.</p>
-            </div>
-            <!-- 6 Series -->
-            <div class="group relative bg-cardBg/90 backdrop-blur border border-carbonBorder rounded-xl overflow-hidden hover:border-white transition p-6">
-                <div class="text-2xl font-black mb-1 text-gray-500 group-hover:text-white transition">6 Series</div>
-                <h3 class="text-md font-bold uppercase">BMW 6 Series (E63, F06 Gran Coupe)</h3>
-                <p class="text-sm text-gray-400 mt-2">Gran Coupe splitters, mirror replacements & spoilers.</p>
-            </div>
-            <!-- 7 Series -->
-            <div class="group relative bg-cardBg/90 backdrop-blur border border-carbonBorder rounded-xl overflow-hidden hover:border-white transition p-6">
-                <div class="text-2xl font-black mb-1 text-gray-500 group-hover:text-white transition">7 Series</div>
-                <h3 class="text-md font-bold uppercase">BMW 7 Series (F01, G11, G70)</h3>
-                <p class="text-sm text-gray-400 mt-2">Subtle luxury carbon accents & front lip upgrades.</p>
-            </div>
-            <!-- 8 Series -->
-            <div class="group relative bg-cardBg/90 backdrop-blur border border-carbonBorder rounded-xl overflow-hidden hover:border-white transition p-6">
-                <div class="text-2xl font-black mb-1 text-gray-500 group-hover:text-white transition">8 Series</div>
-                <h3 class="text-md font-bold uppercase">BMW 8 Series (G14/G15/G16 / M8)</h3>
-                <p class="text-sm text-gray-400 mt-2">High-end aggressive carbon front splitters & rear spoilers.</p>
-            </div>
-            <!-- X Models -->
-            <div class="group relative bg-cardBg/90 backdrop-blur border border-white transition p-6 shadow-xl">
-                <div class="text-2xl font-black mb-1 text-white">X Models</div>
-                <h3 class="text-md font-bold uppercase">BMW X Series (X1 to X7 / X5M / X6M)</h3>
-                <p class="text-sm text-gray-400 mt-2">SUV/SAV performance roof spoilers, mirror caps & diffuser trims.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- AUDI PLATFORMS -->
-    <section id="audi" class="py-24 max-w-7xl mx-auto px-6 bg-cardBg/40 border-t border-b border-carbonBorder">
-        <div class="text-center space-y-4 mb-16">
-            <span class="text-xs uppercase tracking-widest bg-cardBg text-gray-300 px-3 py-1 rounded-full border border-carbonBorder">
-                Audi Sport
-            </span>
-            <h2 class="text-3xl sm:text-4xl font-bold uppercase tracking-wide">Audi Performance Models</h2>
-            <p class="text-gray-400 max-w-lg mx-auto">Autoclave dry carbon components tailored for RS and S-line architecture.</p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- RS3 -->
-            <div class="group relative bg-[#111] border border-carbonBorder rounded-xl overflow-hidden hover:border-white transition p-8 text-center cursor-pointer">
-                <div class="text-3xl font-black mb-2 text-gray-500 group-hover:text-white transition">RS3</div>
-                <h3 class="text-lg font-bold uppercase">Audi RS3 (8V / 8Y)</h3>
-                <p class="text-sm text-gray-400 mt-2">Front splitters, side blade extensions & aggressive rear diffusers.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Product 1: BMW E46 -->
+            <div class="bg-[#111] border border-carbonBorder rounded-xl overflow-hidden group flex flex-col justify-between">
+                <div>
+                    <div class="h-64 bg-black overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="BMW E46 Carbon CSL Trunk" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80">
+                        <span class="absolute top-4 left-4 bg-cardBg border border-carbonBorder text-xs uppercase px-2.5 py-1 rounded font-bold">BMW E46</span>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-lg font-bold">BMW E46 M3 CSL-Style Carbon Trunk Lid</h3>
+                        <p class="text-sm text-gray-400">Authentic integrated ducktail design, pre-preg carbon weave.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToQuote('BMW E46 M3 CSL-Style Carbon Trunk Lid')" class="w-full bg-cardBg hover:bg-white hover:text-black border border-carbonBorder text-white font-semibold py-2.5 rounded transition text-sm uppercase tracking-wider">
+                        + Add to Quote
+                    </button>
+                </div>
             </div>
-            <!-- RS4 / RS5 -->
-            <div class="group relative bg-[#111] border border-carbonBorder rounded-xl overflow-hidden hover:border-white transition p-8 text-center cursor-pointer">
-                <div class="text-3xl font-black mb-2 text-gray-500 group-hover:text-white transition">RS4 / RS5</div>
-                <h3 class="text-lg font-bold uppercase">Audi RS4 & RS5</h3>
-                <p class="text-sm text-gray-400 mt-2">B9 carbon grille surrounds, mirror housings & trunk spoilers.</p>
+
+            <!-- Product 2: BMW E90/E92 -->
+            <div class="bg-[#111] border border-carbonBorder rounded-xl overflow-hidden group flex flex-col justify-between">
+                <div>
+                    <div class="h-64 bg-black overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80" alt="BMW E92 Front Lip" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80">
+                        <span class="absolute top-4 left-4 bg-cardBg border border-carbonBorder text-xs uppercase px-2.5 py-1 rounded font-bold">BMW E90 / E92</span>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-lg font-bold">BMW E92 M3 GT4-Style Front Splitter</h3>
+                        <p class="text-sm text-gray-400">Track-proven aerodynamic splitter with adjustable brackets.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToQuote('BMW E92 M3 GT4-Style Front Splitter')" class="w-full bg-cardBg hover:bg-white hover:text-black border border-carbonBorder text-white font-semibold py-2.5 rounded transition text-sm uppercase tracking-wider">
+                        + Add to Quote
+                    </button>
+                </div>
             </div>
-            <!-- RS6 / RS7 -->
-            <div class="group relative bg-[#111] border border-carbonBorder rounded-xl overflow-hidden hover:border-white transition p-8 text-center cursor-pointer">
-                <div class="text-3xl font-black mb-2 text-gray-500 group-hover:text-white transition">RS6 / RS7</div>
-                <h3 class="text-lg font-bold uppercase">Audi RS6 & RS7 (C8)</h3>
-                <p class="text-sm text-gray-400 mt-2">Full aerodynamic packages, roof spoilers and exhaust surrounds.</p>
+
+            <!-- Product 3: BMW F-Series -->
+            <div class="bg-[#111] border border-carbonBorder rounded-xl overflow-hidden group flex flex-col justify-between">
+                <div>
+                    <div class="h-64 bg-black overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80" alt="BMW F80 M3 Spoiler" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80">
+                        <span class="absolute top-4 left-4 bg-cardBg border border-carbonBorder text-xs uppercase px-2.5 py-1 rounded font-bold">BMW F-Series (F80/F82)</span>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-lg font-bold">BMW F80/F82 M3/M4 High-Kick Spoiler</h3>
+                        <p class="text-sm text-gray-400">Aggressive sweeping carbon spoiler profile for factory trunk fitment.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToQuote('BMW F80/F82 M3/M4 High-Kick Spoiler')" class="w-full bg-cardBg hover:bg-white hover:text-black border border-carbonBorder text-white font-semibold py-2.5 rounded transition text-sm uppercase tracking-wider">
+                        + Add to Quote
+                    </button>
+                </div>
             </div>
+
+            <!-- Product 4: BMW G-Series -->
+            <div class="bg-[#111] border border-carbonBorder rounded-xl overflow-hidden group flex flex-col justify-between">
+                <div>
+                    <div class="h-64 bg-black overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?auto=format&fit=crop&w=800&q=80" alt="BMW G82 M4 Splitter" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80">
+                        <span class="absolute top-4 left-4 bg-cardBg border border-carbonBorder text-xs uppercase px-2.5 py-1 rounded font-bold">BMW G-Series (G80/G82)</span>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-lg font-bold">BMW G80/G82 M3/M4 V-Style Front Splitter</h3>
+                        <p class="text-sm text-gray-400">Multi-piece aerodynamic lower splitter with high gloss finish.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToQuote('BMW G80/G82 M3/M4 V-Style Front Splitter')" class="w-full bg-cardBg hover:bg-white hover:text-black border border-carbonBorder text-white font-semibold py-2.5 rounded transition text-sm uppercase tracking-wider">
+                        + Add to Quote
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 5: BMW X Models -->
+            <div class="bg-[#111] border border-carbonBorder rounded-xl overflow-hidden group flex flex-col justify-between">
+                <div>
+                    <div class="h-64 bg-black overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1541348263662-e052662afda3?auto=format&fit=crop&w=800&q=80" alt="BMW X5M Diffuser" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80">
+                        <span class="absolute top-4 left-4 bg-cardBg border border-carbonBorder text-xs uppercase px-2.5 py-1 rounded font-bold">BMW X Models (X5M / X6M)</span>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-lg font-bold">BMW X5M / X6M Carbon Rear Diffuser</h3>
+                        <p class="text-sm text-gray-400">Robust lower bumper trim with integrated exhaust surrounds.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToQuote('BMW X5M / X6M Carbon Rear Diffuser')" class="w-full bg-cardBg hover:bg-white hover:text-black border border-carbonBorder text-white font-semibold py-2.5 rounded transition text-sm uppercase tracking-wider">
+                        + Add to Quote
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 6: Audi RS3 / RS6 -->
+            <div class="bg-[#111] border border-carbonBorder rounded-xl overflow-hidden group flex flex-col justify-between">
+                <div>
+                    <div class="h-64 bg-black overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80" alt="Audi RS6 Carbon Parts" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80">
+                        <span class="absolute top-4 left-4 bg-cardBg border border-carbonBorder text-xs uppercase px-2.5 py-1 rounded font-bold">Audi RS Performance</span>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-lg font-bold">Audi RS3 / RS6 / RS7 Dry Carbon Mirror Caps</h3>
+                        <p class="text-sm text-gray-400">Replacement autoclave mirror housings with perfect OEM clips.</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addToQuote('Audi RS3 / RS6 / RS7 Dry Carbon Mirror Caps')" class="w-full bg-cardBg hover:bg-white hover:text-black border border-carbonBorder text-white font-semibold py-2.5 rounded transition text-sm uppercase tracking-wider">
+                        + Add to Quote
+                    </button>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- ABOUT / PROCESS SECTION -->
-    <section id="about" class="py-24 max-w-7xl mx-auto px-6">
+    <section id="about" class="py-24 max-w-7xl mx-auto px-6 border-t border-carbonBorder">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
                 <span class="text-xs uppercase tracking-widest bg-cardBg text-gray-300 px-4 py-1.5 rounded-full border border-carbonBorder">
@@ -215,30 +231,14 @@
                     Uncompromising Craftsmanship. Zero Flaws.
                 </h2>
                 <p class="text-gray-400 font-light leading-relaxed">
-                    At **Carbbon**, we focus strictly on authentic fitment for BMW series and Audi performance platforms. Every part starts with genuine aerospace-grade carbon fibre fabric, vacuum-infused, and cured under intense heat and pressure.
+                    At **Carbbon**, every part starts with genuine aerospace-grade carbon fibre fabric, vacuum-infused, and cured under intense heat and pressure for maximum strength and minimal weight.
                 </p>
-                <div class="space-y-4 pt-2">
-                    <div class="flex items-start gap-4">
-                        <div class="text-white text-xl mt-1"><i class="fa-solid fa-check-circle"></i></div>
-                        <div>
-                            <h4 class="font-bold">OEM Laser Fitment Guarantee</h4>
-                            <p class="text-sm text-gray-400">3D-scanned directly from factory bumpers for effortless, gap-free installation.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="text-white text-xl mt-1"><i class="fa-solid fa-check-circle"></i></div>
-                        <div>
-                            <h4 class="font-bold">UV-Resistant Clear Coat</h4>
-                            <p class="text-sm text-gray-400">Marine-grade gloss finish engineered to prevent yellowing or fading under harsh sun.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="bg-cardBg/90 border border-carbonBorder p-8 rounded-2xl relative h-96 flex items-center justify-center text-center">
+            <div class="bg-cardBg/90 border border-carbonBorder p-8 rounded-2xl relative h-72 flex items-center justify-center text-center">
                 <div class="space-y-4">
                     <i class="fa-solid fa-shield-cat text-5xl text-white"></i>
-                    <h3 class="text-xl font-bold uppercase">Built For Performance</h3>
-                    <p class="text-sm text-gray-400 max-w-sm">Tested at high speeds to ensure structural integrity, reduced weight, and downforce efficiency.</p>
+                    <h3 class="text-xl font-bold uppercase">OEM Laser Fitment Guarantee</h3>
+                    <p class="text-sm text-gray-400 max-w-sm">3D-scanned from original factory specifications.</p>
                 </div>
             </div>
         </div>
@@ -248,50 +248,48 @@
     <section id="gallery" class="py-24 bg-cardBg/40 border-t border-carbonBorder">
         <div class="max-w-7xl mx-auto px-6 text-center space-y-4 mb-12">
             <h2 class="text-3xl font-bold uppercase tracking-wide">Customer Builds Gallery</h2>
-            <p class="text-gray-400">BMW Series, X-Models, and Audi builds equipped with Carbbon components.</p>
+            <p class="text-gray-400">Equipped with Carbbon exterior aerodynamic components.</p>
         </div>
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="h-48 sm:h-64 bg-black border border-carbonBorder rounded-lg flex items-center justify-center text-gray-700 font-bold uppercase tracking-wider">BMW M3 / M4 Build</div>
-            <div class="h-48 sm:h-64 bg-black border border-carbonBorder rounded-lg flex items-center justify-center text-gray-700 font-bold uppercase tracking-wider">BMW X5M Build</div>
-            <div class="h-48 sm:h-64 bg-black border border-carbonBorder rounded-lg flex items-center justify-center text-gray-700 font-bold uppercase tracking-wider">Audi RS3 Build</div>
-            <div class="h-48 sm:h-64 bg-black border border-carbonBorder rounded-lg flex items-center justify-center text-gray-700 font-bold uppercase tracking-wider">Audi RS6 Build</div>
+            <div class="h-48 sm:h-64 bg-black border border-carbonBorder rounded-lg flex items-center justify-center text-gray-600 font-bold uppercase tracking-wider">Build 01</div>
+            <div class="h-48 sm:h-64 bg-black border border-carbonBorder rounded-lg flex items-center justify-center text-gray-600 font-bold uppercase tracking-wider">Build 02</div>
+            <div class="h-48 sm:h-64 bg-black border border-carbonBorder rounded-lg flex items-center justify-center text-gray-600 font-bold uppercase tracking-wider">Build 03</div>
+            <div class="h-48 sm:h-64 bg-black border border-carbonBorder rounded-lg flex items-center justify-center text-gray-600 font-bold uppercase tracking-wider">Build 04</div>
         </div>
     </section>
 
-    <!-- REQUEST QUOTE FORM -->
-    <section id="contact" class="py-24 max-w-4xl mx-auto px-6">
+    <!-- QUOTE REQUEST SECTION -->
+    <section id="quote-section" class="py-24 max-w-4xl mx-auto px-6">
         <div class="bg-cardBg border border-carbonBorder rounded-2xl p-8 sm:p-12 shadow-2xl">
             <div class="text-center space-y-3 mb-10">
-                <h2 class="text-3xl font-bold uppercase tracking-wide">Request a Custom Quote</h2>
-                <p class="text-gray-400 text-sm">Select any BMW Series, X Model, or Audi below. We'll review your specs and email you back with a full price and shipping quote.</p>
+                <h2 class="text-3xl font-bold uppercase tracking-wide">Your Quote Request List</h2>
+                <p class="text-gray-400 text-sm">Review the parts you have selected below, enter your shipping details, and submit your quote.</p>
             </div>
-            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Quote Request Sent! We will email you back shortly with pricing.');">
+
+            <!-- Selected Items Container -->
+            <div id="quote-items-container" class="mb-8 bg-[#111] border border-carbonBorder rounded-xl p-6">
+                <p id="empty-cart-msg" class="text-gray-500 text-center italic text-sm">No parts selected yet. Click "Add to Quote" on any product above!</p>
+                <ul id="quote-list" class="space-y-3 divide-y divide-carbonBorder"></ul>
+            </div>
+
+            <!-- Form -->
+            <form id="quote-form" class="space-y-6 hidden" onsubmit="submitQuote(event)">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Your Name</label>
-                        <input type="text" required class="w-full bg-[#111] border border-carbonBorder rounded px-4 py-3 text-gray-100 focus:outline-none focus:border-white">
+                        <input type="text" id="cust-name" required class="w-full bg-[#111] border border-carbonBorder rounded px-4 py-3 text-gray-100 focus:outline-none focus:border-white">
                     </div>
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Email Address</label>
-                        <input type="email" required class="w-full bg-[#111] border border-carbonBorder rounded px-4 py-3 text-gray-100 focus:outline-none focus:border-white">
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Vehicle (Series / X Model / Audi Model & Year)</label>
-                        <input type="text" placeholder="e.g. BMW X5M F85 or BMW M4 G82" required class="w-full bg-[#111] border border-carbonBorder rounded px-4 py-3 text-gray-100 focus:outline-none focus:border-white">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Shipping Destination (City / Country)</label>
-                        <input type="text" placeholder="e.g. Sydney, Australia" required class="w-full bg-[#111] border border-carbonBorder rounded px-4 py-3 text-gray-100 focus:outline-none focus:border-white">
+                        <input type="email" id="cust-email" required class="w-full bg-[#111] border border-carbonBorder rounded px-4 py-3 text-gray-100 focus:outline-none focus:border-white">
                     </div>
                 </div>
                 <div>
-                    <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Parts / Components Requested</label>
-                    <textarea rows="4" required placeholder="List the specific carbon parts you need (e.g. Front Splitter, Diffuser, Mirror Caps)..." class="w-full bg-[#111] border border-carbonBorder rounded px-4 py-3 text-gray-100 focus:outline-none focus:border-white"></textarea>
+                    <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2">Shipping Destination (City / Country)</label>
+                    <input type="text" id="cust-location" placeholder="e.g. London, UK" required class="w-full bg-[#111] border border-carbonBorder rounded px-4 py-3 text-gray-100 focus:outline-none focus:border-white">
                 </div>
                 <button type="submit" class="w-full bg-white hover:bg-gray-200 text-black font-bold uppercase tracking-wider py-4 rounded transition shadow-lg">
-                    Submit Quote Request
+                    Submit Complete Quote Request
                 </button>
             </form>
         </div>
@@ -301,18 +299,71 @@
     <footer class="bg-cardBg border-t border-carbonBorder py-12 text-center text-sm text-gray-500">
         <div class="max-w-7xl mx-auto px-6 space-y-4">
             <p class="text-xl carbon-logo uppercase tracking-wider text-gray-300">CAR<span class="logo-box">BB</span>ON</p>
-            <p>&copy; 2026 Carbbon. All rights reserved. Specializing in BMW Series, X-Models & Audi components.</p>
+            <p>&copy; 2026 Carbbon. All rights reserved. High-performance carbon fibre components.</p>
         </div>
     </footer>
 
-    <!-- Mobile Menu Toggle Script -->
+    <!-- Interactive Quote Cart Script -->
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        let selectedProducts = [];
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        function addToQuote(productName) {
+            if (!selectedProducts.includes(productName)) {
+                selectedProducts.push(productName);
+                updateQuoteUI();
+                alert(`Added to your quote request:\n"${productName}"`);
+            } else {
+                alert('This item is already in your quote list!');
+            }
+        }
+
+        function removeFromQuote(index) {
+            selectedProducts.splice(index, 1);
+            updateQuoteUI();
+        }
+
+        function updateQuoteUI() {
+            const listEl = document.getElementById('quote-list');
+            const countEl = document.getElementById('cart-count');
+            const emptyMsg = document.getElementById('empty-cart-msg');
+            const formEl = document.getElementById('quote-form');
+
+            countEl.innerText = selectedProducts.length;
+
+            if (selectedProducts.length === 0) {
+                emptyMsg.style.display = 'block';
+                formEl.classList.add('hidden');
+                listEl.innerHTML = '';
+            } else {
+                emptyMsg.style.display = 'none';
+                formEl.classList.remove('hidden');
+                listEl.innerHTML = '';
+                
+                selectedProducts.forEach((item, index) => {
+                    const li = document.createElement('li');
+                    li.className = "flex items-center justify-between pt-3 first:pt-0 text-sm";
+                    li.innerHTML = `
+                        <span class="text-gray-200 font-medium"><i class="fa-solid fa-check text-white mr-2"></i> ${item}</span>
+                        <button type="button" onclick="removeFromQuote(${index})" class="text-red-400 hover:text-red-300 text-xs uppercase tracking-wider font-bold">Remove</button>
+                    `;
+                    listEl.appendChild(li);
+                });
+            }
+        }
+
+        function submitQuote(event) {
+            event.preventDefault();
+            const name = document.getElementById('cust-name').value;
+            const email = document.getElementById('cust-email').value;
+            const location = document.getElementById('cust-location').value;
+
+            alert(`Thank you ${name}! Your quote request for ${selectedProducts.length} item(s) has been submitted. We will email pricing back to ${email} shortly.`);
+            
+            // Reset
+            selectedProducts = [];
+            updateQuoteUI();
+            document.getElementById('quote-form').reset();
+        }
     </script>
 </body>
 </html>
